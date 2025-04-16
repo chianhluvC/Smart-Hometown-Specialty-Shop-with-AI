@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- https://go.microsoft.com/fwlink/?LinkID=208121. -->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\inetpub\wwwroot\helloworld</_PublishTargetUrl>
+    <History>False|2025-02-25T08:34:45.2789753Z||;False|2025-02-25T15:26:50.7611380+07:00||;False|2025-02-25T15:21:17.3311176+07:00||;False|2025-02-25T15:09:12.7559644+07:00||;False|2025-02-25T15:01:07.0824199+07:00||;False|2025-02-25T14:54:37.8187127+07:00||;False|2025-02-25T14:44:13.2104416+07:00||;False|2025-02-25T14:41:48.4744416+07:00||;False|2025-02-25T14:41:05.4678333+07:00||;</History>
+    <LastFailureDetails />
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+</Project>

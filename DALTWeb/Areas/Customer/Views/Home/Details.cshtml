@@ -1,0 +1,54 @@
+﻿
+@model GioHang
+
+<form method="post">
+    <!-- Single Page Header start -->
+    <div class="container-fluid page-header py-5">
+        <h1 class="text-center text-white display-6">Chi tiết đặc sản</h1>
+        <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item"><a asp-action="Index">Trang chủ</a></li>
+            <li class="breadcrumb-item active text-white">Chi tiết đặc sản</li>
+        </ol>
+    </div>
+    <!-- Single Page Header End -->
+    <!-- Single Product Start -->
+    <div class="container-fluid py-5 mt-5">
+        <div class="container py-5">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-8 col-xl-9">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="border rounded">
+                                <a href="#">
+                                    <img src="@Model.SanPham.ImageUrl" class="img-fluid rounded" alt="Image">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h4 class="fw-bold mb-3">@Model.SanPham.Name</h4>
+                            <p class="mb-3">Loại đặc sản: @Model.SanPham.TheLoai.Name </p>
+                            <h5 class="fw-bold mb-3">@Model.SanPham.Price $ </h5>
+                            <p class="mb-4">@Model.SanPham.Description</p>
+                            <div class="input-group quantity mb-5" style="width: 100px;">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-sm btn-minus rounded-circle bg-light border">
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                <input id="qty" asp-for=Quantity value="@Model.Quantity" type="text" class="form-control form-control-sm text-center border-0" min="1" step="1" >
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-sm btn-plus rounded-circle bg-light border">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</button>
+                        </div>
+
+
+                    </div>
+                    <!-- Single Product End -->
+
+
+
+</form>

@@ -1,0 +1,35 @@
+﻿@model TheLoai
+
+<div class="container">
+	<h3>Chinh sua the loai</h3>
+	<form method="post" asp-action="Edit">
+		<div asp-validation-summary="All" class="text-danger"></div>
+		<div class="form-group">
+			<label asp-for="Name">Ten the loai</label>
+			<input asp-for="Name" type="text" class="form-control" />
+			<span asp-validation-for="Name" class="text-danger"></span>
+		</div>
+		<div class="form-group">
+			<img src="@Model.ImageUrl" style="width:50px;height:50px" />
+			<br />
+			<label asp-for="ImageUrl">Link anh</label>
+			<input asp-for="ImageUrl" type="text" class="form-control" />
+		</div>
+		<div class="form-group">
+			<label asp-for="DateCreated">Ngay tao</label>
+			<input asp-for="DateCreated" type="date" class="form-control" />
+			<span asp-validation-for="DateCreated" class="text-danger"></span>
+		</div>
+
+
+		<button type="submit" class="btn btn-primary">Luu</button>
+		<a asp-action="Index" class="btn btn-secondary">Huy</a>
+
+	</form>
+
+
+
+</div>
+
+
+

@@ -1,0 +1,87 @@
+﻿@using DALTWeb.Models
+@model GioHangViewModel
+
+
+
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">THANH TOÁN</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a asp-action="Index">Trang chủ</a></li>
+        <li class="breadcrumb-item active text-white">Thanh toán</li>
+    </ol>
+</div>
+
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <h1 class="mb-4">Billing details</h1>
+        <form action="ThanhToan" method="post">
+            @Html.AntiForgeryToken()
+            <div class="row g-5">
+                <div class="col-md-12 col-lg-6 col-xl-7">
+                   <div class="row">
+                       
+                        <div class="col-md-12 col-lg-6">
+                            <div class="form-item">
+                                <label class="form-label my-3">Tên Khách Hàng<sup>*</sup></label>
+                                <input asp-for="HoaDon.Name" type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-item">
+                            <label class="form-label my-3">Địa chỉ<sup>*</sup></label>
+                            <input asp-for="HoaDon.Address" type="text" class="form-control" placeholder="Tên nhà Số đường">
+                        </div>
+                        <div class="form-item">
+                            <label class="form-label my-3">Số điện thoại<sup>*</sup></label>
+                            <input required asp-for="HoaDon.PhoneNumber" type="text" class="form-control" placeholder="Số điện thoại">
+                        </div>
+
+                   </div>
+                  </div>
+                <div class="col-md-12 col-lg-6 col-xl-5">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Đặc sản</th>
+                                    <th scope="col">Tên gọi</th>
+                                    <th scope="col">Giá tiền</th>
+                                    <th scope="col">Số lượng</th>
+                                    <th scope="col">Tổng cộng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach( var item in Model.DsGioHang)
+                                {
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex align-items-center mt-2">
+                                                <img src="@item.SanPham.ImageUrl" class="img-fluid rounded-circle" style="width: 90px; height: 90px;" alt="">
+                                            </div>
+                                        </th>
+                                        <td class="py-5">@item.SanPham.Name</td>
+                                        <td class="py-5">@item.SanPham.Price</td>
+                                        <td class="py-5">@item.Quantity</td>
+                                        <td class="py-5">@item.ProductPrice</td>
+                                    </tr>
+
+                                }
+                                
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="row g-4 text-center align-items-center justify-content-center pt-4">
+                        <button type="submit" name="payment" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Đặt Hàng</button>
+                        <input type="submit" name="payment" value="Thanh Toan VNPay" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary"/>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+</div>
+

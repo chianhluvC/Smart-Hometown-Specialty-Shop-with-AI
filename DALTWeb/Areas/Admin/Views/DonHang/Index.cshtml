@@ -1,0 +1,45 @@
+﻿@using DALTWeb.Models
+@model IEnumerable<HoaDon>
+
+
+
+	<div class="container">
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Ma Don Hang</th>
+					<th>Ten Khach Hang</th>
+					<th>SDT</th>
+					<th>Dia Chi</th>
+					<th>Trang Thai</th>
+					<th>Tong Tien</th>
+					<th>Chuc Nang</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				@foreach(var item in @Model)
+			{
+				<tr>
+					<td>@item.Id</td>
+					<td>@item.Name</td>
+					<td>@item.PhoneNumber</td>
+					<td>@item.Address</td>
+					<td>@item.OrderStatus</td>
+					<td>@item.Total</td>
+					<td>
+						<a asp-action="ChiTiet" asp-route-iddh="@item.Id">Chi tiet don hang</a>
+					</td>
+				</tr>
+			}
+				
+			</tbody>
+
+
+
+		</table>
+
+
+
+	</div>

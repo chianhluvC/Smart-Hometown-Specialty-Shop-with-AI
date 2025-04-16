@@ -1,0 +1,261 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|c:\\users\\hoang\\onedrive\\ta\u0300i li\u00EA\u0323u\\smart-hometown-specialty-shop-with-ai\\daltweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|solutionrelative:daltweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|c:\\users\\hoang\\onedrive\\ta\u0300i li\u00EA\u0323u\\smart-hometown-specialty-shop-with-ai\\daltweb\\services\\deepseekservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|solutionrelative:daltweb\\services\\deepseekservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|c:\\users\\hoang\\onedrive\\ta\u0300i li\u00EA\u0323u\\smart-hometown-specialty-shop-with-ai\\daltweb\\areas\\customer\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|solutionrelative:daltweb\\areas\\customer\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|c:\\users\\hoang\\onedrive\\ta\u0300i li\u00EA\u0323u\\smart-hometown-specialty-shop-with-ai\\daltweb\\views\\shared\\components\\chatbot\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|solutionrelative:daltweb\\views\\shared\\components\\chatbot\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|c:\\users\\hoang\\onedrive\\ta\u0300i li\u00EA\u0323u\\smart-hometown-specialty-shop-with-ai\\daltweb\\areas\\customer\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|solutionrelative:daltweb\\areas\\customer\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|c:\\users\\hoang\\onedrive\\ta\u0300i li\u00EA\u0323u\\smart-hometown-specialty-shop-with-ai\\daltweb\\areas\\customer\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|solutionrelative:daltweb\\areas\\customer\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|c:\\users\\hoang\\onedrive\\ta\u0300i li\u00EA\u0323u\\smart-hometown-specialty-shop-with-ai\\daltweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|solutionrelative:daltweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|c:\\users\\hoang\\onedrive\\ta\u0300i li\u00EA\u0323u\\smart-hometown-specialty-shop-with-ai\\daltweb\\viewcomponents\\giohangviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|solutionrelative:daltweb\\viewcomponents\\giohangviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|c:\\users\\hoang\\onedrive\\ta\u0300i li\u00EA\u0323u\\smart-hometown-specialty-shop-with-ai\\daltweb\\views\\shared\\components\\giohang\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|solutionrelative:daltweb\\views\\shared\\components\\giohang\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|c:\\users\\hoang\\onedrive\\ta\u0300i li\u00EA\u0323u\\smart-hometown-specialty-shop-with-ai\\daltweb\\areas\\customer\\views\\home\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|solutionrelative:daltweb\\areas\\customer\\views\\home\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|c:\\users\\hoang\\onedrive\\ta\u0300i li\u00EA\u0323u\\smart-hometown-specialty-shop-with-ai\\daltweb\\areas\\customer\\views\\home\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|solutionrelative:daltweb\\areas\\customer\\views\\home\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|c:\\users\\hoang\\onedrive\\ta\u0300i li\u00EA\u0323u\\smart-hometown-specialty-shop-with-ai\\daltweb\\services\\vnpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|solutionrelative:daltweb\\services\\vnpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|c:\\users\\hoang\\onedrive\\ta\u0300i li\u00EA\u0323u\\smart-hometown-specialty-shop-with-ai\\daltweb\\viewcomponents\\chatbotviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|solutionrelative:daltweb\\viewcomponents\\chatbotviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|c:\\users\\hoang\\onedrive\\ta\u0300i li\u00EA\u0323u\\smart-hometown-specialty-shop-with-ai\\daltweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89541112-ED7C-4D0A-9870-6CBBA6694D2B}|DALTWeb\\DALTWeb.csproj|solutionrelative:daltweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GioHangController.cs",
+              "DocumentMoniker": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Areas\\Customer\\Controllers\\GioHangController.cs",
+              "RelativeDocumentMoniker": "DALTWeb\\Areas\\Customer\\Controllers\\GioHangController.cs",
+              "ToolTip": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Areas\\Customer\\Controllers\\GioHangController.cs",
+              "RelativeToolTip": "DALTWeb\\Areas\\Customer\\Controllers\\GioHangController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T08:15:19.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Areas\\Customer\\Controllers\\ChatController.cs",
+              "RelativeDocumentMoniker": "DALTWeb\\Areas\\Customer\\Controllers\\ChatController.cs",
+              "ToolTip": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Areas\\Customer\\Controllers\\ChatController.cs",
+              "RelativeToolTip": "DALTWeb\\Areas\\Customer\\Controllers\\ChatController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T08:15:15.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DeepSeekService.cs",
+              "DocumentMoniker": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Services\\DeepSeekService.cs",
+              "RelativeDocumentMoniker": "DALTWeb\\Services\\DeepSeekService.cs",
+              "ToolTip": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Services\\DeepSeekService.cs",
+              "RelativeToolTip": "DALTWeb\\Services\\DeepSeekService.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAgwKwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T08:11:05.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Program.cs",
+              "RelativeDocumentMoniker": "DALTWeb\\Program.cs",
+              "ToolTip": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Program.cs",
+              "RelativeToolTip": "DALTWeb\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T08:08:36.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GioHangViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\ViewComponents\\GioHangViewComponent.cs",
+              "RelativeDocumentMoniker": "DALTWeb\\ViewComponents\\GioHangViewComponent.cs",
+              "ToolTip": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\ViewComponents\\GioHangViewComponent.cs",
+              "RelativeToolTip": "DALTWeb\\ViewComponents\\GioHangViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T08:35:23.239Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "DALTWeb\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "DALTWeb\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAmwNIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-14T10:29:05.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\appsettings.json",
+              "RelativeDocumentMoniker": "DALTWeb\\appsettings.json",
+              "ToolTip": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\appsettings.json",
+              "RelativeToolTip": "DALTWeb\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-14T08:01:07.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Areas\\Customer\\Views\\Home\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "DALTWeb\\Areas\\Customer\\Views\\Home\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Areas\\Customer\\Views\\Home\\_ViewImports.cshtml",
+              "RelativeToolTip": "DALTWeb\\Areas\\Customer\\Views\\Home\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-14T17:39:56.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Views\\Shared\\Components\\Chatbot\\Default.cshtml",
+              "RelativeDocumentMoniker": "DALTWeb\\Views\\Shared\\Components\\Chatbot\\Default.cshtml",
+              "ToolTip": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Views\\Shared\\Components\\Chatbot\\Default.cshtml",
+              "RelativeToolTip": "DALTWeb\\Views\\Shared\\Components\\Chatbot\\Default.cshtml",
+              "ViewState": "AgIAABoBAAAAAAAAAAAmwKABAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-14T08:27:48.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Areas\\Customer\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "DALTWeb\\Areas\\Customer\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Areas\\Customer\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "DALTWeb\\Areas\\Customer\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:20:36.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Areas\\Customer\\Views\\Home\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "DALTWeb\\Areas\\Customer\\Views\\Home\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Areas\\Customer\\Views\\Home\\_ViewStart.cshtml",
+              "RelativeToolTip": "DALTWeb\\Areas\\Customer\\Views\\Home\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-14T17:40:03.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Views\\Shared\\Components\\GioHang\\Default.cshtml",
+              "RelativeDocumentMoniker": "DALTWeb\\Views\\Shared\\Components\\GioHang\\Default.cshtml",
+              "ToolTip": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Views\\Shared\\Components\\GioHang\\Default.cshtml",
+              "RelativeToolTip": "DALTWeb\\Views\\Shared\\Components\\GioHang\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-14T17:40:16.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "VNPayService.cs",
+              "DocumentMoniker": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Services\\VNPayService.cs",
+              "RelativeDocumentMoniker": "DALTWeb\\Services\\VNPayService.cs",
+              "ToolTip": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\Services\\VNPayService.cs",
+              "RelativeToolTip": "DALTWeb\\Services\\VNPayService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T08:24:12.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ChatbotViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\ViewComponents\\ChatbotViewComponent.cs",
+              "RelativeDocumentMoniker": "DALTWeb\\ViewComponents\\ChatbotViewComponent.cs",
+              "ToolTip": "C:\\Users\\hoang\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Smart-Hometown-Specialty-Shop-with-AI\\DALTWeb\\ViewComponents\\ChatbotViewComponent.cs",
+              "RelativeToolTip": "DALTWeb\\ViewComponents\\ChatbotViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T10:23:56.699Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

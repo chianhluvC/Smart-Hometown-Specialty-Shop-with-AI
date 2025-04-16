@@ -1,0 +1,616 @@
+﻿@{
+    Layout = "";
+}
+
+<div id="chatbot-toggle" class="chatbot-toggle-btn">
+    <div class="toggle-btn-inner">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+    </div>
+</div>
+
+<div class="chatbot-container" id="chatbot-container">
+    <div class="chatbot">
+        <div class="chatbot-header">
+            <div class="chatbot-avatar">
+                <img src="https://play-lh.googleusercontent.com/GQARnf4eU3-wqj3-n0yDjTWW1bOrFjmV-qtDCsdfKY48DlrvmkLbH6IwSKStegs_XMM" alt="Bot" />
+            </div>
+            <div class="chatbot-title">Trợ lý đặc sản</div>
+            <div class="chatbot-actions">
+                <button id="toggle-theme" class="theme-toggle" aria-label="Chuyển đổi giao diện">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button id="close-chatbot" class="theme-toggle" aria-label="Đóng">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="chat-history" class="chat-history"></div>
+
+        <div id="loading" class="loading-indicator">
+            <div class="typing-indicator">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <span class="loading-text">Đang phản hồi...</span>
+            <button id="cancel-request" class="cancel-btn">Huỷ</button>
+        </div>
+
+        <div class="chat-input-container">
+            <input type="text" id="user-input" class="chat-input" placeholder="Bạn muốn hỏi gì?" />
+            <button id="send-message" class="send-message-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Reset và biến màu sắc */
+    :root {
+        --primary-color: #4a6cf7;
+        --primary-hover: #3a5ce4;
+        --text-color: #333;
+        --bg-color: #fff;
+        --message-user-bg: #4a6cf7; /* Màu đậm hơn cho tin nhắn người dùng */
+        --message-user-text: #ffffff; /* Màu chữ trắng cho độ tương phản */
+        --message-bot-bg: #f5f5f5;
+        --border-color: #e9e9e9;
+        --input-bg: #f5f7fa;
+        --header-bg: linear-gradient(135deg, #4a6cf7, #6e8bfa);
+        --shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+        --border-radius: 12px;
+    }
+
+    /* Dark Mode Colors */
+    .dark-mode {
+        --primary-color: #5d7bf9;
+        --primary-hover: #6e8bfa;
+        --text-color: #e1e1e1;
+        --bg-color: #222222;
+        --message-user-bg: #5d7bf9; /* Màu phù hợp với dark mode */
+        --message-user-text: #ffffff;
+        --message-bot-bg: #333333;
+        --border-color: #444444;
+        --input-bg: #333333;
+        --header-bg: linear-gradient(135deg, #3a5ce4, #4a6cf7);
+        --shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Toggle Button */
+    .chatbot-toggle-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .toggle-btn-inner {
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        background: var(--header-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        box-shadow: var(--shadow);
+        transition: all 0.3s ease;
+    }
+
+        .toggle-btn-inner:hover {
+            transform: scale(1.05);
+        }
+
+    /* Chatbot Container */
+    .chatbot-container {
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        z-index: 99999;
+        width: 380px;
+        height: 550px;
+        max-width: 90vw;
+        max-height: 80vh;
+        box-shadow: var(--shadow);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        transition: all 0.3s ease;
+        display: none;
+    }
+
+    .chatbot {
+        background: var(--bg-color);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        color: var(--text-color);
+    }
+
+    /* Header */
+    .chatbot-header {
+        background: var(--header-bg);
+        color: white;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    }
+
+    .chatbot-avatar img {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        margin-right: 12px;
+        border: 2px solid rgba(255,255,255,0.5);
+        object-fit: cover;
+    }
+
+    .chatbot-title {
+        font-size: 17px;
+        letter-spacing: 0.2px;
+    }
+
+    .chatbot-actions {
+        margin-left: auto;
+        display: flex;
+        gap: 8px;
+    }
+
+    .theme-toggle {
+        background: rgba(255,255,255,0.2);
+        border: none;
+        color: white;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+        .theme-toggle:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+    /* Chat History */
+    .chat-history {
+        flex: 1;
+        padding: 16px;
+        overflow-y: auto;
+        background-color: var(--bg-color);
+        scroll-behavior: smooth;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+        /* Message Styles */
+        .chat-history .message {
+            max-width: 85%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            position: relative;
+            font-size: 14px;
+            line-height: 1.5;
+            word-break: break-word;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* Cải thiện style tin nhắn người dùng */
+        .chat-history .user {
+            align-self: flex-end;
+            background: var(--message-user-bg);
+            color: var(--message-user-text);
+            border-bottom-right-radius: 4px;
+            margin-left: auto;
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(74, 108, 247, 0.25);
+        }
+
+            .chat-history .user::after {
+                content: '';
+                position: absolute;
+                bottom: -3px;
+                right: -3px;
+                width: 10px;
+                height: 10px;
+                background: var(--message-user-bg);
+                border-radius: 50%;
+                z-index: -1;
+            }
+
+        .chat-history .bot {
+            align-self: flex-start;
+            background: var(--message-bot-bg);
+            color: var(--text-color);
+            border-bottom-left-radius: 4px;
+        }
+
+            .chat-history .bot::after {
+                content: '';
+                position: absolute;
+                bottom: -3px;
+                left: -3px;
+                width: 10px;
+                height: 10px;
+                background: var(--message-bot-bg);
+                border-radius: 50%;
+                z-index: -1;
+            }
+
+    /* Loading indicator */
+    .loading-indicator {
+        display: none;
+        align-items: center;
+        padding: 10px 16px;
+        gap: 12px;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .typing-indicator {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+    }
+
+        .typing-indicator span {
+            width: 6px;
+            height: 6px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: inline-block;
+            animation: bounce 1.5s infinite ease-in-out;
+        }
+
+            .typing-indicator span:nth-child(1) {
+                animation-delay: 0s;
+            }
+
+            .typing-indicator span:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+
+            .typing-indicator span:nth-child(3) {
+                animation-delay: 0.4s;
+            }
+
+    .loading-text {
+        font-size: 14px;
+        color: var(--text-color);
+    }
+
+    .cancel-btn {
+        margin-left: auto;
+        padding: 5px 12px;
+        background-color: #e2e6ea;
+        color: #555;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 12px;
+        transition: all 0.2s;
+    }
+
+        .cancel-btn:hover {
+            background-color: #d2d6da;
+        }
+
+    /* Input area */
+    .chat-input-container {
+        display: flex;
+        border-top: 1px solid var(--border-color);
+        padding: 14px 16px;
+        background: var(--bg-color);
+    }
+
+    .chat-input {
+        flex: 1;
+        padding: 12px 16px;
+        border: 1px solid var(--border-color);
+        background: var(--input-bg);
+        border-radius: 24px;
+        outline: none;
+        transition: all 0.2s;
+        color: var(--text-color);
+    }
+
+        .chat-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(74, 108, 247, 0.2);
+        }
+
+    .send-message-btn {
+        width: 44px;
+        height: 44px;
+        margin-left: 10px;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 22px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+    }
+
+        .send-message-btn:hover {
+            background-color: var(--primary-hover);
+            transform: scale(1.05);
+        }
+
+    /* Product suggestions */
+    .product-suggestions {
+        margin-top: 12px;
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        scrollbar-width: thin;
+    }
+
+        .product-suggestions::-webkit-scrollbar {
+            height: 5px;
+        }
+
+        .product-suggestions::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 5px;
+        }
+
+    .product-card {
+        min-width: 160px;
+        max-width: 160px;
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        overflow: hidden;
+        background: var(--bg-color);
+        transition: all 0.2s;
+    }
+
+        .product-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+    .product-image {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .product-info {
+        padding: 10px;
+    }
+
+    .product-name {
+        font-weight: 600;
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .product-price {
+        color: var(--primary-color);
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    /* Animations */
+    @@keyframes bounce {
+        0%, 80%, 100%
+
+    {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    }
+
+    @@keyframes fadeIn {
+        from
+
+    {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    }
+
+    /* Media queries */
+    @@media (max-width: 480px) {
+        .chatbot-container
+
+    {
+        right: 10px;
+        bottom: 80px;
+        width: calc(100vw - 20px);
+        height: calc(80vh - 20px);
+    }
+
+    }
+</style>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    let currentAbortController = null;
+    let isDarkMode = false;
+
+    function toggleChatbot() {
+        $('#chatbot-container').fadeToggle(300);
+
+        if ($('#chatbot-container').is(':visible')) {
+            $('#user-input').focus();
+
+            // Thêm tin nhắn chào mừng nếu chat trống
+            if ($('#chat-history').children().length === 0) {
+                setTimeout(() => {
+                    appendMessage('bot', 'Xin chào! Tôi là trợ lý đặc sản, hãy cho tôi biết bạn cần tìm đặc sản nào?');
+                }, 500);
+            }
+        }
+    }
+
+    function sendMessage() {
+        const input = $('#user-input');
+        const message = input.val().trim();
+        if (!message) return;
+
+        appendMessage('user', message);
+        input.val('');
+        showLoading(true);
+
+        currentAbortController = new AbortController();
+
+        fetch('/api/Chat/Ask', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val() || ''
+            },
+            body: JSON.stringify({ message }),
+            signal: currentAbortController.signal
+        })
+        .then(res => res.json())
+        .then(data => {
+            appendMessage('bot', data.reply);
+
+            if (data.productSuggestions) {
+                appendProductSuggestions(data.productSuggestions);
+            }
+
+            showLoading(false);
+        })
+        .catch(error => {
+            if (error.name === 'AbortError') {
+                appendMessage('bot', '⛔ Bạn đã huỷ yêu cầu.');
+            } else {
+                appendMessage('bot', '❌ Có lỗi xảy ra khi phản hồi.');
+                console.error('Error:', error);
+            }
+            showLoading(false);
+        });
+    }
+
+    function appendMessage(sender, text) {
+        const messageDiv = $('<div>')
+            .addClass('message')
+            .addClass(sender)
+            .text(text)
+            .css('opacity', '0');
+
+        $('#chat-history').append(messageDiv);
+
+        // Animation
+        setTimeout(() => {
+            messageDiv.css({
+                'opacity': '1',
+                'transform': 'translateY(0)',
+                'transition': 'opacity 0.3s, transform 0.3s'
+            });
+        }, 10);
+
+        scrollToBottom();
+    }
+
+    function appendProductSuggestions(html) {
+        const wrapper = $('<div>')
+            .addClass('product-suggestions-wrapper')
+            .html(html)
+            .css('opacity', '0');
+
+        $('#chat-history').append(wrapper);
+
+        // Animation
+        setTimeout(() => {
+            wrapper.css({
+                'opacity': '1',
+                'transform': 'translateY(0)',
+                'transition': 'opacity 0.3s, transform 0.3s'
+            });
+        }, 10);
+
+        scrollToBottom();
+    }
+
+    function scrollToBottom() {
+        const history = $('#chat-history');
+        history.scrollTop(history[0].scrollHeight);
+    }
+
+    function showLoading(show) {
+        $('#loading').css('display', show ? 'flex' : 'none');
+    }
+
+    function toggleDarkMode() {
+        isDarkMode = !isDarkMode;
+        $('body').toggleClass('dark-mode');
+
+        if (isDarkMode) {
+            $('#toggle-theme svg').html('<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"></path>');
+        } else {
+            $('#toggle-theme svg').html('<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>');
+        }
+    }
+
+    $(document).ready(function () {
+        // Chuyển đổi phong cách tin nhắn từ div thành message
+        $('#chat-history').find('.user, .bot').each(function() {
+            $(this).addClass('message').removeClass('user bot');
+        });
+
+        // Event listeners
+        $('#chatbot-toggle').on('click', toggleChatbot);
+        $('#close-chatbot').on('click', toggleChatbot);
+        $('#toggle-theme').on('click', toggleDarkMode);
+        $('#send-message').on('click', sendMessage);
+        $('#cancel-request').on('click', function () {
+            if (currentAbortController) {
+                currentAbortController.abort();
+            }
+        });
+        $('#user-input').on('keypress', function (e) {
+            if (e.which === 13) {
+                sendMessage();
+            }
+        });
+
+        // Thêm hiệu ứng hover cho nút toggle
+        $('#chatbot-toggle').hover(
+            function() {
+                $(this).find('.toggle-btn-inner').css('transform', 'scale(1.05)');
+            },
+            function() {
+                $(this).find('.toggle-btn-inner').css('transform', 'scale(1)');
+            }
+        );
+    });
+</script>

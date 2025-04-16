@@ -1,0 +1,50 @@
+﻿
+
+<div class="container">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Ten Loai Dac San</th>
+				<th>Ngay Tao</th>
+				<th>Anh loai</th>
+				<th>Chuc nang</th>
+			</tr>
+		</thead>
+
+		<tbody>
+
+			@foreach (var item in ViewBag.TheLoai)
+			{
+				<tr>
+					<td>@item.Name</td>
+					<td>@item.DateCreated</td>
+					<td><img style="width:100px;height:100px" src="@item.ImageUrl" alt="anhloai" /></td>					
+					<td>
+						<a asp-action="Edit" asp-route-id="@item.Id">Edit</a>|
+						<a asp-action="detail" asp-route-id="@item.Id">Details</a>|
+						<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>|
+					</td>
+				</tr>
+
+			}
+
+
+		</tbody>
+
+
+	</table>
+
+	<a asp-action="Create" class="btn btn-primary">Them moi</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+

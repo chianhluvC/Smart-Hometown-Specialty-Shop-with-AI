@@ -1,0 +1,54 @@
+﻿
+
+<div class="container">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Ten san pham</th>
+				<th>Mo ta san pham</th>
+				<th>Gia san pham</th>
+				<th>Anh san pham</th>
+				<th>Ten the loai</th>
+				<th>Chuc nang</th>
+			</tr>
+		</thead>
+
+		<tbody>
+
+			@foreach (var item in ViewBag.sp)
+			{
+				<tr>
+					<td>@item.Name</td>
+					<td>@item.Description</td>
+					<td>@item.Price</td>
+					<td><img style="width:100px;height:100px" src="@item.ImageUrl" /></td>
+					<td>@item.TheLoai.Name</td>
+					<td>
+						<a asp-action="Upsert" asp-route-id="@item.Id">Edit</a>|
+						<a asp-action="detail" asp-route-id="@item.Id">Details</a>|
+						<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>|
+					</td>
+				</tr>
+
+			}
+
+
+		</tbody>
+
+
+	</table>
+
+	<a asp-action="Upsert" class="btn btn-primary">Them moi</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+

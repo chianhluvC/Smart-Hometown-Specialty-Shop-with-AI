@@ -1,0 +1,52 @@
+﻿@using DALTWeb.Models
+@model SanPham
+
+
+
+<div class="container">
+	<form method="post" asp-action="Upsert">
+		<div class="form-group">
+			<label asp-for="Name">Ten san pham</label>
+			<input asp-for="Name" type="text" class="form-control" />
+			<span asp-validation-for="Name" class="text-danger"></span>
+		</div>
+
+		<div class="form-group">
+			<label asp-for="Price">Gia san pham</label>
+			<input asp-for="Price" type="text" class="form-control" />
+			<span asp-validation-for="Price" class="text-danger"></span>
+		</div>
+
+		<div class="form-group">
+			<label asp-for="ImageUrl">Anh san pham</label>
+			<input asp-for="ImageUrl" type="text" class="form-control" />
+			<span asp-validation-for="ImageUrl" class="text-danger"></span>
+		</div>
+
+		<div class="form-group">
+			<label asp-for="Description">Mo ta san pham</label>
+			<input asp-for="Description" type="text" class="form-control" />
+			<span asp-validation-for="Description" class="text-danger"></span>
+		</div>
+
+		<div class="form-group">
+			<label asp-for="TheLoaiId">The loai</label>
+			<select asp-for="TheLoaiId" asp-items="@ViewBag.DSTheLoai" class="form-control">
+				<option disabled>Chon the loai</option>
+			</select>
+			<span asp-validation-for="TheLoaiId" class="text-danger"></span>
+
+		</div>
+		<button type="submit" class="btn btn-primary">@(Model.Id == 0 ? "Tao moi" : "Cap nhat")</button>
+		<a asp-action="Index" class="btn btn-secondary">Huy</a>
+	</form>
+
+</div>
+
+
+@section Scripts {
+	@{
+		<partial name="_ValidationScriptsPartial" />
+	}
+
+}

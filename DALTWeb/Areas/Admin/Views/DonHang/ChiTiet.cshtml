@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ChiTietHoaDon>
+
+
+	<div class="container">
+		<h1>Ma Don Hang: @ViewBag.MaHoaDon</h1>
+		<h1>Ten Khach Hang: @ViewBag.TenKH</h1>
+		<h1>Tong Tien: @ViewBag.TongTien</h1>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Ten Dac San</th>
+					<th>So Luong</th>
+					<th>Gia Thanh</th>
+					<th>Tong</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				@foreach(var item in @Model)
+			{
+				<tr>
+					<td>@item.SanPham.Name</td>
+					<td>@item.Quantity</td>
+					<td>@item.SanPham.Price</td>
+					<td>@item.ProductPrice</td>
+				</tr>
+			}
+				
+			</tbody>
+
+
+
+		</table>
+
+
+
+	</div>
