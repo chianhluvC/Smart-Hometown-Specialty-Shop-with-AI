@@ -1,4 +1,4 @@
-# Smart Hometown Specialty Shop with AI Chatbot
+# Smart Hometown Specialty Shop with AI
 
 ![Screenshot of homepage](https://github.com/user-attachments/assets/a5ac41c7-d4ac-4c92-9133-0303933d2223)
 ![Screenshot of product page](https://github.com/user-attachments/assets/4315041a-9574-469b-bcf2-957306fb07e5)
