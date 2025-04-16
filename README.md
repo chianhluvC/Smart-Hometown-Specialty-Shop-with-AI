@@ -1,4 +1,5 @@
-Smart Hometown Specialty Shop with AI Chatbot
+# Smart Hometown Specialty Shop with AI Chatbot
+
 ![Screenshot 2025-04-16 175321](https://github.com/user-attachments/assets/a5ac41c7-d4ac-4c92-9133-0303933d2223)
 ![Screenshot 2025-04-16 175401](https://github.com/user-attachments/assets/4315041a-9574-469b-bcf2-957306fb07e5)
 
@@ -112,6 +113,8 @@ Edit
 <!-- jQuery and Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
 💬 Example Chatbot Conversation
 User: “Tìm đặc sản Hà Nội”
 Bot: “Đây là gợi ý của tôi dựa trên...”
