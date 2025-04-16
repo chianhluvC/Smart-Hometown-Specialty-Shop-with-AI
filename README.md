@@ -9,22 +9,7 @@ Built with ASP.NET Core MVC (.NET 7) using Razor Views (cshtml).
 Features a smart AI chatbot powered by DeepSeek V3 API, and supports secure online payment through VNPay.
 
 🔧 Technologies Used
-ASP.NET Core MVC (.NET 7)
-
-DeepSeek V3 API 
-
-Razor Views (.cshtml)
-
-Entity Framework Core
-
-SQL Server
-
-Bootstrap 5 (Responsive design)
-
-jQuery 3.6+ (Client-side interactivity)
-
-VNPay API (Payment Gateway)
-
+ASP.NET Core MVC (.NET 7), DeepSeek V3 API, Razor Views (.cshtml), Entity Framework Core, SQL Server, Bootstrap 5 (Responsive design), jQuery 3.6+ (Client-side interactivity), VNPay API (Payment Gateway)
 
 
 💡 Key Features
